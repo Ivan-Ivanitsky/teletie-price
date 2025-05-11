@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fira+Sans:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:ital,wght@0,400;0,600;0,800;1,300&family=Orbitron:wght@600&family=Roboto+Serif:opsz@8..144&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Teletie</title>
+  </head>
+
+  <body>
+
+    <div id="intro" class="intro">
+        <div class="intro-head">
+            <div class="title">Телетай   
+                <svg
+                  width="90"
+                  height="70"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="40" cy="160" r="20" fill="#FFC107" />
+                  <rect
+                    x="80"
+                    y="100"
+                    width="40"
+                    height="80"
+                    rx="20"
+                    fill="#FFC107"
+                  />
+                  <rect
+                    x="140"
+                    y="20"
+                    width="40"
+                    height="100"
+                    rx="20"
+                    fill="#FFC107"
+                  />
+                  <circle cx="160" cy="160" r="20" fill="#FFC107" />
+                </svg>
+              </div>
+            <button id="btn-start" class="button-tariffs">К тарифам</button>
+        </div>
+    </div>
+
+    <div section id="price">
+      <div id="container-pdf" class="container">
+        <div class="price__header">
+          <div class="price__logo">
+            <img src="./logo/png/teletie-logo.png" alt="logo" />
+          </div>
+          <div class="price__choice">
+            <h1 class="h1">Выбери свой тариф</h1>
+          </div>
+          <div class="price__billing">
+            *Тарификация сверх включённого пакета: 10Гб / ₽150, 20Гб / ₽250,
+            30Гб / ₽300 <br />
+            *Перенос остатка всех пакетов на тарифах : ВДО 450
+          </div>
+        </div>
+        <section class="tariffs">
+          <div class="tariffs-container loading">
+            <!-- <div class="card-skeleton"></div> -->
+          </div>
+          <div class="logo_teletie">
+            <svg
+              width="200"
+              height="200"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="40" cy="160" r="20" fill="#FFC107" />
+              <rect
+                x="80"
+                y="100"
+                width="40"
+                height="80"
+                rx="20"
+                fill="#FFC107"
+              />
+              <rect
+                x="140"
+                y="20"
+                width="40"
+                height="100"
+                rx="20"
+                fill="#FFC107"
+              />
+              <circle cx="160" cy="160" r="20" fill="#FFC107" />
+            </svg>
+          </div>
+          <div class="footer_descr">
+            <btn
+              class="btn-save"
+              id="downloadPDF"
+              name="btn-save-pdf"
+              type="button"
+              >Сохранить в PDF <div class="spinner" id="spinner"> <span></span> <span></span> <span></span></div></btn>
+            <div class="footer_descr__text">
+              Абонентская плата списывается в месяц подключения посуточно
+              пропорционально, далее единоразово за месяц.
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-content" id="modalContent">
+      <form id="editForm">
+        <div class="form-card">
+          <div class="form-group">
+            <label>Название тарифа:</label>
+            <input type="text" id="tariffName" name="tariff" required />
+          </div>
+          <div class="form-group">
+            <label>Минуты:</label>
+            <input type="number" id="tariffMinutes" name="minut" required />
+          </div>
+          <div class="form-group">
+            <label>ГБ:</label>
+            <input type="number" id="tariffGB" name="Gb" required />
+          </div>
+          <div class="form-group">
+            <label>SMS:</label>
+            <input type="number" id="tariffSMS" name="sms" required />
+          </div>
+          <div class="form-group">
+            <label>Стоимость (₽/мес):</label>
+            <input type="number" id="tariffPrice" name="price" required />
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="cancel-btn">Отмена</button>
+            <button type="submit">Сохранить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <!-- Подключаем библиотеку html2canvas для "фотографирования" HTML-элемента -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- Подключаем библиотеку jsPDF для создания PDF-файлов -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+
+  <script src="./js/main.js" type="module" defer></script>
+</html>

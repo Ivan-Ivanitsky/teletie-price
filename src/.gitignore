@@ -1,0 +1,19 @@
+# node_modules и зависимости
+node_modules/
+dist/
+.cache/
+.vite/
+
+# системные файлы
+.DS_Store
+Thumbs.db
+
+# редакторы
+.vscode/
+.idea/
+
+# лог-файлы
+*.log
+
+# OS
+*.swp

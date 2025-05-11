@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Social/Yandex/Active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons/Social/Yandex/Active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <circle id="Oval-Copy-2" fill="#E2E2E2" cx="75" cy="75" r="74.5738636"></circle>
+            <path d="M102.077415,61.9051847 C102.072934,62.7129078 102.040584,63.5202359 101.980424,64.325728 C101.01052,76.5380859 92.9392312,89.0793679 85.7324219,101.055575 L72.5585938,121.280185 L72.5585938,91.4240057 C56.2557991,91.4240057 43.0397727,78.2079793 43.0397727,61.9051847 C43.0397727,45.60239 56.2557991,32.3863636 72.5585938,32.3863636 C88.8613884,32.3863636 102.077415,45.60239 102.077415,61.9051847 Z M72.5585938,74.556108 C79.5455058,74.556108 85.209517,68.8920967 85.209517,61.9051847 C85.209517,54.9182727 79.5455058,49.2542614 72.5585938,49.2542614 C65.5716817,49.2542614 59.9076705,54.9182727 59.9076705,61.9051847 C59.9076705,68.8920967 65.5716817,74.556108 72.5585938,74.556108 Z" id="Combined-Shape-Copy-2" fill="#FF3333" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
