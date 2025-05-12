@@ -177,6 +177,7 @@ cards.forEach((card,i)=>{
         modalOverlay.addEventListener('click',(e)=>{
             modal.classList.remove('active')
             modalOverlay.classList.remove('active')
+            document.body.style.overflow  = 'auto'
         })
     })
 })
