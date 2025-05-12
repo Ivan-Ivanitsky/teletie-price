@@ -436,12 +436,17 @@ h1 {
   width: 90%;
   max-width: 500px;
   z-index: -1;
+  overflow: hidden;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-content.active {
   opacity: 1;
   transform: translate(-50%, -50%);
   z-index: 10000;
+  overflow-y: auto;
 }
 
 .form-group {
@@ -672,10 +677,5 @@ h1 {
   .title {
     flex-direction: column-reverse;
     align-items: center;
-  }
-}
-@media screen and (orientation: portrait) {
-  .container {
-    flex-direction: column;
   }
 }/*# sourceMappingURL=main.min.css.map */

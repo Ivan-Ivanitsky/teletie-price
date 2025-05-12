@@ -464,6 +464,10 @@ h1{
     width: $var14;
     max-width: 500px;
     z-index: -1;
+    overflow: hidden;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -472,6 +476,7 @@ h1{
     opacity: 1;
     transform: translate(-50%, -50%);
     z-index: 10000;
+    overflow-y: auto;
 }
 
 .form-group {
@@ -696,8 +701,3 @@ h1{
     }
 }
 
-@media screen and (orientation: portrait) {
-    .container {
-      flex-direction: column;
-    }
-  }
