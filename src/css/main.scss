@@ -696,4 +696,8 @@ h1{
     }
 }
 
-
+@media screen and (orientation: portrait) {
+    .container {
+      flex-direction: column;
+    }
+  }

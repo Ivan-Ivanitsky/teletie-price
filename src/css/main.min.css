@@ -673,4 +673,9 @@ h1 {
     flex-direction: column-reverse;
     align-items: center;
   }
+}
+@media screen and (orientation: portrait) {
+  .container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.min.css.map */
