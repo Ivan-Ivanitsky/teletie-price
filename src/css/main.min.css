@@ -192,7 +192,6 @@ h1 {
 /* card-skeleton*/
 .card-skeleton {
   /* max-height: 289.2px; */
-  min-height: 289px;
   background: #f0f0f0;
   margin-bottom: 20px;
   border-radius: 12px;

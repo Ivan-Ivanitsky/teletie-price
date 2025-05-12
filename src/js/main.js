@@ -152,24 +152,24 @@ import downloadPDF from "./savePdf.js";
     }
 
 
-
+    function sleep(ms){
+       return new Promise(resolve=>setTimeout(resolve,ms))
+    }
 
     async function render() { 
-      skeleton()
+       await sleep(1000) 
        await createCard(resp||tariffs)
        modal()
-   
     }
     
  
    
 
-    btnStart.addEventListener('click',(e)=>{
+    btnStart.addEventListener('click',async(e)=>{
         document.querySelector('.intro').classList.add('hidden')
         document.getElementById('price').style.display='block'
         skeleton()
-        render()
+        await render()
     })
   });
 })();
-
