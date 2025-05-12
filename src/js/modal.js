@@ -4,7 +4,6 @@ import setLocalStore from "./localStore.js";
 import tariffs from "./tariffs.js";
 
 export default function modal(){    
-
 let currentCardId = '' 
 
 const modal = document.getElementById('modalContent')
@@ -112,6 +111,7 @@ function  setFormCardAttribute(id,i){
 
 cards.forEach((card,i)=>{
     i++
+    console.log(i)
     card.addEventListener('click',(e)=>{
         if(card.id===`vdo-${i}`){
             const cardVdo = {

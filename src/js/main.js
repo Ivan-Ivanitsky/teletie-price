@@ -1,6 +1,6 @@
 import tariffs from "./tariffs.js";
 import modal from './modal.js';
-import setLocalStore from "./localStore.js";
+
 import downloadPDF from "./savePdf.js";
 
 
@@ -154,22 +154,22 @@ import downloadPDF from "./savePdf.js";
 
 
 
-    function render() { 
+    async function render() { 
       skeleton()
-      setTimeout(()=>{
-        createCard(resp||tariffs)
-        modal()
-      },1000)
+       await createCard(resp||tariffs)
+       modal()
+   
     }
+    
+ 
    
 
     btnStart.addEventListener('click',(e)=>{
-        console.log(e)
         document.querySelector('.intro').classList.add('hidden')
         document.getElementById('price').style.display='block'
+        skeleton()
+        render()
     })
-    render()
-
   });
 })();
 
