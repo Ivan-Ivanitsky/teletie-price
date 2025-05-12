@@ -170,6 +170,7 @@ cards.forEach((card,i)=>{
             if(e.target)
             modal.classList.remove('active')
             modalOverlay.classList.remove('active')
+            document.body.style.overflow  = 'auto'
         }
 
         document.body.style.overflow='hidden'
