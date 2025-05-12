@@ -65,20 +65,27 @@ Html intro
 }
 
 .button-tariffs {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f9d423;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffc600; /* жёлтый текст */
+  border: 2px solid #ffc600; /* жёлтая рамка */
+  border-radius: 12px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-self: center;
   cursor: pointer;
-  border: solid 2px;
-  border-radius: 10px;
-  padding: 10px;
-  background: rgb(243, 252, 255);
-  font-family: "Rubik", sans-serif;
 }
 
 .button-tariffs:hover, .button-tariffs:active {
   box-shadow: 0 0 15px #f9d423;
   transition: 0.5s all;
+  background-color: #ffc600;
+  color: white;
 }
 
 @keyframes float {
@@ -141,7 +148,7 @@ Html intro
 .tariffs {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
 }
 
 .tariffs-container {
@@ -252,7 +259,7 @@ h1 {
 .card__content-drive {
   flex-direction: column;
   padding: 0;
-  gap: 4rem;
+  gap: 1rem;
 }
 
 .card__content-drive .description {
@@ -646,9 +653,6 @@ h1 {
     flex-direction: column;
     text-align: center;
     gap: 0.3rem;
-  }
-  .price__billing {
-    font-size: 14px;
   }
   .tariffs-container {
     justify-content: center;

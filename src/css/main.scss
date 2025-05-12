@@ -2,7 +2,7 @@ $var1: 100%;
 $var2: 12px;
 $var3: 16px;
 $var4: 20px;
-$var5: 4rem;
+$var5: 1rem;
 $var6: 15px;
 $var7: #fff;
 $var8: #f0f0f0;
@@ -32,7 +32,6 @@ html,body{
 body{
     position: relative;
 }
-
 body.modal-open {
   
     overflow: hidden;
@@ -90,21 +89,29 @@ Html intro
   }
 
   .button-tariffs{
-      font-size: 1.5rem;
-      font-weight: bold;
-      color:  #f9d423;
-      cursor: pointer;
-      border: solid 2px;
-      border-radius: 10px;
-      padding: 10px;
-      background:rgb(243 252 255);
-      font-family: 'Rubik', sans-serif;
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffc600; /* жёлтый текст */
+    border: 2px solid #ffc600; /* жёлтая рамка */
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    align-self: center;
+    cursor: pointer;
   }
 
 
   .button-tariffs:hover,.button-tariffs:active{
     box-shadow: 0 0 15px#f9d423;
     transition: .5s all;
+    background-color: #ffc600;
+    color: white;
+    // box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   }
 
 
@@ -664,9 +671,7 @@ h1{
         text-align: center;
         gap: 0.3rem;
     }
-    .price__billing{
-        font-size: $var11;
-    }
+ 
     .tariffs-container{
         justify-content: center;
     }

@@ -2,7 +2,6 @@ import tariffs from "./tariffs.js";
 import modal from './modal.js';
 import setLocalStore from "./localStore.js";
 import downloadPDF from "./savePdf.js";
-import intro from "./intro.js";
 
 
 (function () {
@@ -90,7 +89,7 @@ import intro from "./intro.js";
                     <div class="price_value">
                         <span> ${item.price} ₽/мес</span>
                         <div class="logo-unlim logo-unlim_mr ">
-                            <img src="./logo/infinity-svgrepo-com.svg" alt="infinity">
+                            <img src="./logo/png/infinity-svgrepo-com.png" alt="infinity">
                         </div>
                     </div>
                 </div>
@@ -161,8 +160,10 @@ import intro from "./intro.js";
         modal()
       },1000)
     }
-    intro()
-    btnStart.addEventListener('click',()=>{
+   
+
+    btnStart.addEventListener('click',(e)=>{
+        console.log(e)
         document.querySelector('.intro').classList.add('hidden')
         document.getElementById('price').style.display='block'
     })

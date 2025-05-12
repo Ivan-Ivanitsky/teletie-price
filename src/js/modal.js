@@ -30,6 +30,7 @@ form.addEventListener('submit',(e)=>{
     
     modal.classList.remove('active')
     modalOverlay.classList.remove('active')
+    document.body.style.overflow  = 'auto'
     const formCardId =  form.querySelector('.form-card').id
 
     if(formCardId === currentCardId){
@@ -162,6 +163,7 @@ cards.forEach((card,i)=>{
 
             modal.classList.add('active')
             modalOverlay.classList.add('active')
+        
         }
         
         function closeModal(e){
@@ -170,7 +172,12 @@ cards.forEach((card,i)=>{
             modalOverlay.classList.remove('active')
         }
 
+        document.body.style.overflow='hidden'
         cancelBtn.addEventListener('click',(e)=> closeModal(e))
+        modalOverlay.addEventListener('click',(e)=>{
+            modal.classList.remove('active')
+            modalOverlay.classList.remove('active')
+        })
     })
 })
 }

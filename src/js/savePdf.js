@@ -5,11 +5,13 @@ async function downloadPDF() {
 
     // Указываем, какой элемент HTML мы хотим сохранить
     const element = document.getElementById("container-pdf");
-    const clone = createClone(element)
-   
-    document.body.append(clone)   
 
-   showSpinner()
+    //создаем клона 
+    const clone = createClone(element)
+   console.log(clone)
+    document.body.append(clone)   
+    // показываем спинер 
+    showSpinner()
 
     const canvas = await html2canvas(clone, {
       scale: 4, // Увеличение масштаба для лучшего качества
@@ -27,7 +29,10 @@ async function downloadPDF() {
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
 
-    clone.remove()
+
+    // удаляем клона 
+    // clone.remove()
+    // удаляем спинер 
     removeSpiner()
     // Добавляем картинку во весь лист PDF
  
@@ -40,7 +45,7 @@ async function downloadPDF() {
 
   function createClone(element){
     const clone = element.cloneNode(true)
-    const width = `${1030}px`
+    const width = `${1080}px`
     const height = `${780}px`
 
 
@@ -50,8 +55,11 @@ async function downloadPDF() {
     clone.style.position = 'fixed'
     clone.style.left = '-99999px'
     clone.querySelector('.btn-save').remove()
+    clone.querySelector('.tariffs').style.gap='4rem'
+    clone.querySelector('.footer_descr').style.textAlign ='left'
     clone.querySelector('.price__header').style.cssText = `flex-direction: row;
     text-align: auto;
+    justify-content: space-between;
     gap: 0;
     `
     clone.querySelector('.tariffs-container').style.justifyContent = 'normal';
