@@ -69,7 +69,7 @@ import downloadPDF from "./savePdf.js";
                         </div>
                         <div class="tariff__option tariff__option_calls">
                             <div class="logo-unlim">
-                                <img src="./logo/infinity-svgrepo-com.svg" alt="infinity">
+                                <img src="./logo/png/infinity-svgrepo-com.png" alt="infinity">
                             </div>
                             <div class="description">
                                 звонки<p></p>
