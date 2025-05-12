@@ -115,6 +115,7 @@ import downloadPDF from "./savePdf.js";
                             <span>по всей России</span>
                         </div>
                     </div>
+                    <div class='tariff__drive-logo'><img src='./logo/png/modem.png'></div>
                 </div>
                 <div class="price price-drive">
                     <div class="price_value price_value-drive">

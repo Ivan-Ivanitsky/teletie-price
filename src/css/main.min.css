@@ -300,6 +300,10 @@ h1 {
   flex-direction: column;
 }
 
+.tariff__drive-logo img {
+  height: 60px;
+}
+
 .quantity {
   white-space: nowrap;
   font-size: 1.6rem;
