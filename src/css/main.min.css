@@ -64,6 +64,10 @@ Html intro
   font-family: "Rubik", sans-serif;
 }
 
+.buttons {
+  text-align: center;
+}
+
 .button-tariffs {
   display: inline-block;
   padding: 12px 28px;
@@ -231,7 +235,7 @@ h1 {
   z-index: 0;
   cursor: pointer;
   background: #fff;
-  width: 15.5rem;
+  width: 16rem;
   border-radius: 0.5rem;
   overflow: hidden;
   z-index: 0;

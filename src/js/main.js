@@ -2,6 +2,7 @@ import tariffs from "./tariffs.js";
 import modal from './modal.js';
 
 import downloadPDF from "./savePdf.js";
+import learn from "./learn.js";
 
 
 (function () {
@@ -9,6 +10,7 @@ import downloadPDF from "./savePdf.js";
     const resp = JSON.parse(localStorage.getItem('data'))
     const btnSave = document.getElementById('downloadPDF');
     const btnStart = document.getElementById('btn-start')
+    const btnLearn = document.getElementById('btn-learn')
     btnSave.addEventListener('click',()=> downloadPDF())
 
 
@@ -51,7 +53,7 @@ import downloadPDF from "./savePdf.js";
                         </div>
                         <div class="tariff__option tariff__option_internet">
                             <div class="quantity" type="number">
-                                ${item.Gb} <span class="tariff__text-gb">Гб</span> 
+                                ${item.Gb} Гб 
                             </div>
                             <div class="description">
                                 Интернет*<p></p>
@@ -156,10 +158,13 @@ import downloadPDF from "./savePdf.js";
        return new Promise(resolve=>setTimeout(resolve,ms))
     }
 
-    async function render() { 
-       await sleep(1000) 
-       await createCard(resp||tariffs)
-       modal()
+    async function render(e) {
+       if(e==='btn-start'){
+        await sleep(1000) 
+        await createCard(resp||tariffs)
+        modal()
+       }else
+        await createCard(resp||tariffs)
     }
     
  
@@ -169,7 +174,14 @@ import downloadPDF from "./savePdf.js";
         document.querySelector('.intro').classList.add('hidden')
         document.getElementById('price').style.display='block'
         skeleton()
-        await render()
+        await render(e.target.id)
+    })
+
+    btnLearn.addEventListener('click',(e)=>{
+        document.querySelector('.intro').classList.add('hidden')
+        document.getElementById('price').style.display='block'
+        render(e.target.id)
+        learn(e.target.id)
     })
   });
 })();

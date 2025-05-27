@@ -42,7 +42,6 @@ form.addEventListener('submit',(e)=>{
         for(let [key,value] of formData){
             newTariff [key] = value
         }
-
         update(newTariff,currentCardId)
     }
     else{
@@ -53,7 +52,9 @@ form.addEventListener('submit',(e)=>{
 
 function update(data,id){
     const index = tariffs.findIndex(item=> item.name===id)
+    // const tariff__text = document.createElement('')
     const card = document.getElementById(id)
+
     const loader = card.querySelector('.loader')
     let newTariffs = [...tariffs]
 
@@ -62,7 +63,6 @@ function update(data,id){
     }
 
     setLocalStore(newTariffs)
-    console.log(JSON.parse(localStorage.getItem('data')))
     loader.classList.remove('hidden')
     setTimeout(()=>{
         loader.classList.add('hidden')
@@ -74,17 +74,15 @@ function update(data,id){
 
 
 function renderCard(card, data){
-    console.log(card)
-
     if(data.name===card.id && data.name!=='drive'){
         card.querySelector('.card__header').textContent = ` ${data.tariff}`
         card.querySelector('.tariff__option_minut .quantity').textContent = `${data.minut}`|| ''
-        card.querySelector('.tariff__option_internet .quantity').textContent = `${data.Gb}`
+        card.querySelector('.tariff__option_internet .quantity').textContent = `${data.Gb} Гб`
         card.querySelector('.tariff__option_sms .quantity').textContent = `${data.sms}`|| ''
         card.querySelector('.price_value span').textContent =`${data.price} ₽/мес`
     }else{
         card.querySelector('.card__header').textContent =` ${data.tariff}`
-        card.querySelector('.tariff__drive .quantity').textContent =`${data.Gb}`
+        card.querySelector('.tariff__drive .quantity').textContent =`${data.Gb} Гб`
         card.querySelector('.price_value-drive span').textContent = `${data.price} ₽/мес`
     }    
 }
@@ -111,7 +109,6 @@ function  setFormCardAttribute(id,i){
 
 cards.forEach((card,i)=>{
     i++
-    console.log(i)
     card.addEventListener('click',(e)=>{
         if(card.id===`vdo-${i}`){
             const cardVdo = {
