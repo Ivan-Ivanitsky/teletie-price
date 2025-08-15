@@ -43,10 +43,10 @@ export default function modal() {
   });
 
   function update(data, id) {
-    const unlim = './logo/png/infinity-svgrepo-com.png';
-    const cardVdoUnlim = `<img src=${unlim} alt='unlim' style=width:32px>`;
+    // const unlim = './logo/png/infinity-svgrepo-com.png';
+    const cardVdoUnlim = `<span style=font-size:15px;display:block;font-weight:700>${data.Gb}</span>`;
 
-    data.Gb === '' ? (data.Gb = cardVdoUnlim) : (data.Gb = `${data.Gb} Гб`);
+    data.Gb.trim() === 'Безлимит' ? (data.Gb = cardVdoUnlim) : (data.Gb = `${data.Gb}`);
     const index = tariffs.findIndex((item) => item.name === id);
 
     console.log(data.Gb);
@@ -70,10 +70,10 @@ export default function modal() {
 
   function renderCard(card, data) {
     if (data.name === card.id && data.name !== 'drive') {
-      card.querySelector('.card__header').textContent = ` ${data.tariff}`;
-      card.querySelector('.tariff__option_minut .quantity').textContent = `${data.minut}` || '';
+      card.querySelector('.card__header').textContent = `${data.tariff}`;
+      card.querySelector('.tariff__option_minut .quantity').textContent = `${data.minut}`;
       card.querySelector('.tariff__option_internet .quantity').innerHTML = data.Gb;
-      card.querySelector('.tariff__option_sms .quantity').textContent = `${data.sms}` || '';
+      card.querySelector('.tariff__option_sms .quantity').textContent = `${data.sms}`;
       card.querySelector('.price_value span').textContent = `${data.price} ₽/мес`;
     } else {
       card.querySelector('.card__header').textContent = ` ${data.tariff}`;
@@ -105,7 +105,7 @@ export default function modal() {
         const cardVdo = {
           name: card.querySelector('.card__header').textContent,
           minut: getNumber(card.querySelector('.tariff__option_minut .quantity').textContent),
-          Gb: getNumber(card.querySelector('.tariff__option_internet .quantity').textContent),
+          Gb: card.querySelector('.tariff__option_internet .quantity').textContent,
           sms: getNumber(card.querySelector('.tariff__option_sms .quantity').textContent),
           price: getNumber(card.querySelector('.price_value span').textContent),
         };

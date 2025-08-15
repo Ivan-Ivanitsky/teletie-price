@@ -6,7 +6,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -85,7 +86,8 @@ Html intro
   cursor: pointer;
 }
 
-.button-tariffs:hover, .button-tariffs:active {
+.button-tariffs:hover,
+.button-tariffs:active {
   box-shadow: 0 0 15px #f9d423;
   transition: 0.5s all;
   background-color: #ffc600;
@@ -288,7 +290,7 @@ h1 {
   display: flex;
   gap: 1rem;
   width: 100%;
-  min-width: 167.5px;
+  min-width: 174.5px;
   justify-content: space-between;
   align-items: center;
 }
@@ -361,7 +363,8 @@ h1 {
   max-height: 11rem;
 }
 
-.logo-unlim img, .logo-unlim_social img {
+.logo-unlim img,
+.logo-unlim_social img {
   width: 100%;
 }
 
@@ -507,13 +510,15 @@ h1 {
 }
 
 /*animate*/
-.card, .card-drive {
+.card,
+.card-drive {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-.card.show, .card-drive.show {
+.card.show,
+.card-drive.show {
   opacity: 1;
   transform: translateY(0);
 }
